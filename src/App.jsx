@@ -25,7 +25,21 @@ const App = () => {
     determineWinner(choice, computer);
   };
 
-  
+  const determineWinner = (user, computer) => {
+    if (user === computer) {
+      setResult("Égalité !");
+    } else if (
+      (user === "pierre" && computer === "ciseaux") ||
+      (user === "papier" && computer === "pierre") ||
+      (user === "ciseaux" && computer === "papier")
+    ) {
+      setResult("Vous gagnez !");
+      setScore((prev) => ({ ...prev, user: prev.user + 1 }));
+    } else {
+      setResult("L'ordinateur gagne !");
+      setScore((prev) => ({ ...prev, computer: prev.computer + 1 }));
+    }
+  };
 
   return (
     <div className="container">
