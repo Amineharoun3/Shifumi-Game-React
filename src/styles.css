@@ -1,0 +1,117 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    background-size: 300% 300%;
+    animation: backgroundAnimation 8s infinite alternate;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  /* Animation du fond */
+  @keyframes backgroundAnimation {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Écran d'accueil */
+  .welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .welcome-screen h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .welcome-screen h1 span {
+    color: #ffcc00;
+  }
+  
+  .welcome-screen p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  
+  .start-button {
+    background-color: #ffcc00;
+    color: black;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .start-button:hover {
+    transform: scale(1.1);
+    background-color: #ffaa00;
+  }
+  
+  /* Écran du jeu */
+  .game-screen h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .scoreboard {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .choice-button {
+    background: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  .choice-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+  .result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .scoreboard {
+    position: absolute;
+    bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
